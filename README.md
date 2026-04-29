@@ -108,7 +108,7 @@ Hypotonia, and Language Impairment. It:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/22q13_WGCNA.git
+git clone https://github.com/snehalshah2887/WGCNA-disease-coexpression.git
 cd 22q13_WGCNA
 
 # 2. Prepare input data (see data/README.md for full details)
