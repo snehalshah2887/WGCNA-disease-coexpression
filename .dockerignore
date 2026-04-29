@@ -1,0 +1,44 @@
+# =============================================================================
+# .dockerignore — 22q13 WGCNA Pipeline
+#
+# Build context root: project root (used with: docker build -f docker/Dockerfile .)
+# The ONLY directory that must reach the Docker daemon is scripts/ — everything
+# else listed here is excluded to keep the build context small and fast.
+# =============================================================================
+
+# Nextflow runtime directories (can reach gigabytes after a full pipeline run)
+work/
+.nextflow/
+.nextflow.log
+.nextflow.log.*
+
+# Pipeline output (mounted at runtime, never baked into the image)
+results/
+
+# Input data (mounted at runtime via -v, not copied into the image)
+data/
+
+# Nextflow pipeline files (not needed inside the container)
+nextflow/
+conf/
+
+# Docker source directory itself (Dockerfile is read via -f, not via COPY)
+docker/
+
+# Version control
+.git/
+.gitignore
+
+# Documentation
+README.md
+CITATION.md
+NEXTFLOW_DOCKER_SKILLS.md
+
+# Stray R data files at the project root
+*.rds
+*.RData
+*.csv
+
+# macOS filesystem artifacts
+.DS_Store
+**/.DS_Store

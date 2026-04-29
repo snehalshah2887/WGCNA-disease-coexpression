@@ -1,0 +1,37 @@
+# =============================================================================
+# .gitignore — 22q13 WGCNA Pipeline
+# =============================================================================
+
+# ---- Input data ---------------------------------------------------------------
+# gene_expression_filtered.csv is tracked (11 MB, public data, paper published)
+# All other large or sensitive data formats are excluded
+data/input/*.xlsx
+data/input/*.rds
+data/input/*.RData
+
+# ---- Pipeline outputs (generated at runtime) --------------------------------
+results/
+
+# ---- Nextflow runtime -------------------------------------------------------
+.nextflow/
+.nextflow.log*
+work/
+
+# ---- R artefacts ------------------------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+*.rds
+*.RData
+*-block.*.RData
+
+# ---- OS artefacts -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ---- IDE --------------------------------------------------------------------
+.vscode/
+.idea/

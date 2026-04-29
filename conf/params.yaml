@@ -1,0 +1,21 @@
+# =============================================================================
+# Default parameter file for the 22q13 WGCNA Pipeline
+# Usage: nextflow run nextflow/main.nf -params-file conf/params.yaml
+#
+# Edit the paths below to point to your local copies of the input data.
+# =============================================================================
+
+# ---- Input data (REQUIRED) --------------------------------------------------
+# Combined gene expression file: columns 1-10 are gene annotation,
+# columns 11-534 are BrainSpan expression values (524 samples).
+# Already merged and filtered (mean >= 0.3 threshold applied).
+
+expression: "data/input/gene_expression_filtered.csv"
+
+# ---- Output -----------------------------------------------------------------
+outdir: "results/"
+
+# ---- Pipeline control -------------------------------------------------------
+# Set to false ONLY if you have Cytoscape 3.9+ running and want live network
+# import. When true, only edge/node TXT files are written (headless-safe).
+skip_cytoscape: true
